@@ -24,7 +24,7 @@ An iOS-inspired clock and weather card for [Home Assistant](https://www.home-ass
 
 ## Installation
 
-The card is installed through [HACS](https://hacs.xyz):
+The card requires Home Assistant 2023.9 or newer and is installed through [HACS](https://hacs.xyz):
 
 1. Make sure HACS is installed.
 2. Open the card in HACS and install it:
@@ -434,7 +434,7 @@ Displays the current weather state (localized) or a specific weather entity attr
 
 #### `entity`
 
-Displays a Home Assistant entity's state and unit. A numeric state is rounded to the entity's display precision when one is set in Home Assistant.
+Displays a Home Assistant entity's state and unit. A numeric state is rounded to the entity's display precision when one is set in Home Assistant. Non-numeric values are formatted like Home Assistant does, in its language: a `timestamp` sensor or the `next_rising` attribute of `sun.sun` as a localized date and time, and states such as `on` translated per device class.
 
 | Option | Type | Required | Default | Description |
 |--------|------|----------|---------|-------------|
